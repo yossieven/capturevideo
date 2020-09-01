@@ -36,7 +36,7 @@ class Capture:
         print("x = " + str(x) + " y = " + str(y) + " w = " + str(w) + " h = " + str(h))
         vid = cv2.VideoWriter(self.filename, self.fourcc, 25, (w, h))
 
-        while (True):
+        while True:
             # img = ImageGrab.grab(bbox=(2, 2, 1422, 1200))
             img = ImageGrab.grab(bbox=(x, y, w+x, h+y))
             img_np = np.array(img)
